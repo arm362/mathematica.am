@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Կապ մեզ հետ</title>
+  <link rel="stylesheet" href="math.css">
+  <script>
+    function showConfirmation(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      if (name && email && message) {
+        alert("Շնորհակալութիւն, " + name + "։ Ձեր հաղորդագրութիւնը յաջողութեամբ ուղարկուեց։");
+        document.getElementById("contact-form").reset();
+      } else {
+        alert("Խնդրում ենք լրացնել բոլոր դաշտերը։");
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Մաթեմատիկա</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Գլխաւոր</a></li>
+        <li><a href="about.html">Մասին</a></li>
+        <li><a href="contact.html">Կապ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Կապ մեզ հետ</h1>
+  </section>
+
+  <section class="content contact-section">
+    <h2>Ուղարկէ՛ք Ձեր Հաղորդագրութիւնը</h2>
+    <p>Մենք սիրով կպատասխանենք ձեր հարցերին եւ առաջարկներին։ Խնդրում ենք լրացնել ստորեւ բերված ձեւը։</p>
+
+    <div class="contact-wrapper">
+      <form id="contact-form" onsubmit="showConfirmation(event)">
+        <div class="form-group">
+          <label for="name">Անուն</label>
+          <input type="text" id="name" name="name" placeholder="Մուտքագրեք Ձեր անունը" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Էլ. հասցէ</label>
+          <input type="email" id="email" name="email" placeholder="Ձեր էլ. հասցէն" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Թեմայով</label>
+          <input type="text" id="subject" name="subject" placeholder="Թեմայով կամ վերնագիր" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Հաղորդագրութիւն</label>
+          <textarea id="message" name="message" rows="6" placeholder="Ձեր հաղորդագրութիւնը այստեղ..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Ուղարկել</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Մեր Տեղեկատուութիւնը</h3>
+        <ul>
+          <li><strong>Հասցէ:</strong> Երեւան, Հայաստան</li>
+          <li><strong>Հեռախօս:</strong> +374 00 000000</li>
+          <li><strong>Էլ. փոստ:</strong> math@example.com</li>
+          <li><strong>Ժամեր:</strong> Երկուշաբթի - Ուրբաթ, 09:00 - 18:00</li>
+        </ul>
+        <img src="math5.jpg" alt="Մեր գտնվելու վայրը" class="responsive-img">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Մաթեմատիկա կայք | Ստեղծուած է կրթական նպատակներով</p>
+  </footer>
+</body>
+</html>
+

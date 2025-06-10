@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մաթեմատիկա | Գլխավոր</title>
+    <link rel="stylesheet" href="math.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">ՄԱԹԵՄԱՏԻԿԱ</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Գլխաւոր</a></li>
+                <li><a href="about.html">Մասին</a></li>
+                <li><a href="contact.html">Կապ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Բարի գալուստ Մաթեմատիկայի աշխարհ</h1>
+            <p>Մաթեմատիկան գիտութիւն է, որ աւգնում է մեզ հասկանալ շրջապատող աշխարհը։</p>
+        </section>
+
+        <section class="content">
+            <h2>Ինչու է Մաթեմատիկան կարեւոր</h2>
+            <p>Մաթեմատիկան ամենուր է՝ ֆինանսների կառաւարմամբ, ճարտարագիտութեան նախագծման մեջ, ծրագրաւորման հիմքում։</p>
+            <p>Այն զարգացնում է տրամաբանական մտածողութիւնը եւ լուծման ունակութիւնը։</p>
+            <p>Մաթեմատիկան նաեւ գեղեցիկ է իր կառուցվածքով եւ աւրինաչափութիւններով։</p>
+
+            <ul>
+                <li>Ալգեբրա</li>
+                <li>Գեոմետրիա</li>
+                <li>Վիճակագրութիւն</li>
+                <li>Թվաբանութիւն</li>
+            </ul>
+
+            <img src="math1.jpg" alt="Մաթեմատիկայի դաս" class="responsive-img">
+            <img src="math2.jpg" alt="Մաթեմատիկայի բանաձեւեր" class="responsive-img">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Մաթեմատիկայի կայք։ Բոլոր իրավունքները պաշտպանված են։</p>
+    </footer>
+
+    <script>
+      // Մի փոքր անիմացիա էջի վերնագրի համար
+      document.addEventListener("DOMContentLoaded", () => {
+        const title = document.querySelector(".hero h1");
+        title.style.opacity = 0;
+        title.style.transform = "translateY(-20px)";
+
+        setTimeout(() => {
+          title.style.transition = "all 1s ease-in-out";
+          title.style.opacity = 1;
+          title.style.transform = "translateY(0)";
+        }, 300);
+      });
+    </script>
+</body>
+</html>
