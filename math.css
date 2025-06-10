@@ -1,0 +1,309 @@
+/* style.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  /* A subtle, warm gradient for the body, transitioning from a soft peach to a gentle lavender. */
+  background: linear-gradient(135deg, #FFF0F5, #E0FFFF); /* Peach Puff to Light Cyan */
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  /* A deep, almost midnight blue, with a hint of cosmic dust. */
+  background: #2C3E50; /* Darker Blue-Grey */
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* A soft, ethereal glow for the shadow. */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* A vibrant, electric lime green for the logo, truly standing out. */
+  color: #39FF14; /* Electric Lime Green */
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.7);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  /* A fiery, passionate orange for the hover effect, hinting at warmth and energy. */
+  color: #FF6600; /* Vivid Orange */
+  text-shadow: 0 0 7px #FF6600, 0 0 15px rgba(255, 102, 0, 0.5);
+}
+
+/* Hero section */
+.hero {
+  background: url('images/hero-background.jpg') no-repeat center center/cover;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #fff;
+  background-attachment: fixed;
+  /* A deeper, more atmospheric overlay for the hero, giving it gravitas. */
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.55);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  /* A rich, golden yellow for the hero title, commanding attention. */
+  color: #FFD700; /* Gold */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Main content */
+.content {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  /* A sophisticated deep teal for section headings, suggesting depth and calm. */
+  color: #00796B; /* Deep Teal */
+  border-bottom: 2px solid #004D40; /* Even deeper teal for the border */
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  /* A slightly softer black for general text, easier on the eyes. */
+  color: #333;
+}
+
+.content ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.content ul li {
+  /* A subtle accent for list items, a soft grey-blue. */
+  color: #5D6D7E; /* Greyish Blue */
+}
+
+/* Responsive Images */
+.responsive-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 10px;
+  /* A richer, more pronounced shadow for images. */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* Contact Form Section */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+form {
+  flex: 1 1 500px;
+  /* A pristine, clean white for the form background, making inputs stand out. */
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  /* A lighter, more refined shadow. */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px); /* A subtle lift on hover */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  /* A warm, inviting brown for labels. */
+  color: #795548; /* Brown */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  /* A serene, calming blue for focus states, signaling clarity. */
+  border-color: #2196F3; /* Blue 500 */
+  outline: none;
+  box-shadow: 0 0 8px rgba(33,150,243,0.6);
+}
+
+button.btn {
+  /* A bold, confident dark violet for the button, exuding purpose. */
+  background: #673AB7; /* Deep Purple */
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button.btn:hover {
+  /* A more intense, almost electric violet on hover. */
+  background: #512DA8; /* Darker Deep Purple */
+  transform: scale(1.05);
+}
+
+/* Contact Info Box */
+.contact-info {
+  flex: 1 1 300px;
+  /* A very light, almost transparent blue-green for the info box, airy and inviting. */
+  background: #E0F7FA; /* Light Cyan */
+  padding: 2rem;
+  border-radius: 12px;
+  /* A gentle, diffused shadow. */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.contact-info:hover {
+  /* A slightly more saturated, cool blue on hover. */
+  background: #B2EBF2; /* Lighter Cyan */
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  /* A calming, yet distinct, seafoam green for the info heading. */
+  color: #26A69A; /* Seafoam Green */
+}
+
+.contact-info ul {
+  list-style: none;
+}
+
+.contact-info li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  /* A soft, reassuring grey for contact details. */
+  color: #4CAF50; /* Green 500 */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  /* A solid, grounding dark grey for the footer, a strong base. */
+  background: #34495E; /* Dark Grey-Blue */
+  color: #ECF0F1; /* Off-white */
+  margin-top: auto;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .content {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  button.btn {
+    width: 100%;
+  }
+}
